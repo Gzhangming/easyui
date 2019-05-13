@@ -19,24 +19,27 @@
     <script type="text/javascript" src="<%=request.getContextPath() %>/easyUi/jquery.easyui.min.js"></script>
 </head>
 <body>
-<ul class="easyui-tree">
-    <li><samp>菜单0</samp></li>
+
+<ul class="easyui-tree" data-options="checkbox:true">
+    <li><span>菜单0</span></li>
 </ul>
 
 <ul id="tree">
-    <li><samp>菜单1</samp></li>
+    <li><span>菜单1</span></li>
     <li>
-        <samp>菜单2</samp>
+        <span>菜单2</span>
         <ul>
-            <li><samp>菜单2-0</samp></li>
-            <li><samp>菜单2-1</samp></li>
+            <li><span>菜单2-0</span></li>
+            <li><span>菜单2-1</span></li>
         </ul>
     </li>
 </ul>
 
 <script type="text/javascript">
     $(function(){
-        $("#tree").tree();
+        $("#tree").tree({
+            checkbox:true
+        });
     })
 </script>
 </body>

@@ -12,4 +12,9 @@ public class jspController {
         return "index";
     }
 
+    @RequestMapping("/basic")
+    public String basic(){
+        return "draggable/basic";
+    }
+
 }
