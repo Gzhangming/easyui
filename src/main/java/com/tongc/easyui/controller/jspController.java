@@ -17,6 +17,13 @@ public class jspController {
         return "draggable/basic";
     }
 
+    //百度地图
+    @RequestMapping("/map")
+    public  String map(){
+        return "map/baidumap";
+    }
+
+
 
 
 }
