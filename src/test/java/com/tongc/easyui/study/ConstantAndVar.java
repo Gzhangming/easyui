@@ -47,6 +47,7 @@ public class ConstantAndVar {
         a=10;
         //声明+赋值
         int b = 10;
+        System.out.println("11111111111111111");
     }
 
 }
