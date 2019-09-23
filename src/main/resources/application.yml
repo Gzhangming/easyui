@@ -1,0 +1,20 @@
+server:
+  port: 8081
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+swagger:
+  enabled: true
+#----------------------Swagger2配置-------------------
+swagger2:
+  open: true
+  testToken: Bearer Get after landing
+  basePackage:
+  name: 上海汉狮智能科技有限公司
+  url:
+  email:
+  title: springboot利用swagger构建api文档
+  description: springboot利用swagger构建api文档
+
