@@ -57,9 +57,42 @@ public class MainSwitch {
             default:
                 System.out.println("请按照提示输入！！！");
         }
+        System.out.println("...............................................");
         /*
-        *
+        *后续语句将全部执行，直到遇到break语句
         * */
+        Scanner scanner1  = new Scanner(System.in);
+        System.out.println("请输入1...3的数字选择关卡:");
+        int b = scanner1.nextInt();
+        switch(b){
+            case 1:
+                System.out.println("关卡1");
+                break;
+            case 2:
+            case 3:
+                System.out.println("关卡2"+"关卡3");
+                break;
+            default:
+                System.out.println("请按照提示输入！！！");
+        }
+
+        System.out.println(".....................................");
+
+        Scanner scanner2 = new Scanner(System.in);
+        System.out.println("输入字符串：");
+        String c = scanner2.nextLine();
+        switch(c){
+            case "km":
+                System.out.println("门已打开！");
+                break;
+            case "gm":
+                System.out.println("门已关闭！");
+                break;
+            default:
+                System.out.println("????????????????????????????");
+        }
+
+
 
     }
 
