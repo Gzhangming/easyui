@@ -1,20 +1,47 @@
 server:
   port: 8081
 spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.106.244.254:3306/apartment_system_dev?characterEncoding=utf8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: Gzhangming_1
+    # 连接池配置
+    hikari:
+      # 等待连接池分配连接的最大时长（毫秒），超过这个时长还没可用的连接则发生SQLException， 缺省:30秒
+      connection-timeout: 30000
+        # 一个连接idle状态的最大时长（毫秒），超时则被释放（retired），缺省:10分钟
+      idle-timeout: 600000
+        # 一个连接的生命时长（毫秒），超时而且没被使用则被释放（retired），缺省:30分钟，建议设置比数据库超时时长少30秒，参考MySQL
+      max-lifetime: 1800000
+        # 连接池中允许的最大连接数。缺省值：10；推荐的公式：((core_count * 2) + effective_spindle_count)
+      maximum-pool-size: 2
+      minimum-idle: 1
   mvc:
     view:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
-swagger:
-  enabled: true
-#----------------------Swagger2����-------------------
+logging:
+    level:
+      com:
+        dalaoyang:
+          dao:
+          UserMapper: debug
+mybatis-plus:
+      type-aliases-package: com.tongc.easyui
+      mapper-locations: classpath*:mapper/*.xml
+      configuration:
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
 swagger2:
   open: true
-  testToken: Bearer Get after landing
+  testToken: Get after landing
   basePackage:
-  name: �Ϻ���ʨ���ܿƼ����޹�˾
+  name: 上海汉狮智能科技有限公司
   url:
   email:
-  title: springboot����swagger����api�ĵ�
-  description: springboot����swagger����api�ĵ�
+  title: springboot利用swagger构建api文档
+  description: springboot利用swagger构建api文档
+
 

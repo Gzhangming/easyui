@@ -47,7 +47,7 @@ public class AppTest {
          TempConfig config = new TempConfig();// 包前缀
          //config.setModuleName("customer"); // 模块名称
          //config.setModuleName("community"); // 模块名称
-         config.setProjectPath("C:\\fileCe");// 代码生成路径
+         config.setProjectPath("C:\\fileCee");// 代码生成路径
          config.setModuleName("customer"); // 模块名称
          config.setModuleName("sys"); // 模块名称称
          config.setPrePackageName("com.smico.apartment.customer.business");   // 包前缀
@@ -88,7 +88,7 @@ public class AppTest {
      */
     public static void configOrder(TempConfig config) {
         // 配置需要生成的表  若不配置默认生成所有
-        config.getTableList().add("user-ceshi");
+        config.getTableList().add("user_ceshi");
     }
     /**
      * 配置community模块

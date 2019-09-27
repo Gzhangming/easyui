@@ -1,4 +1,4 @@
-package com.tongc.easyui.dto.Vo;//
+package com.tongc.easyui.config;//
 //                            _ooOoo_
 //                           o8888888o
 //                           88" . "88
@@ -20,18 +20,21 @@ package com.tongc.easyui.dto.Vo;//
 //        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 //                      佛祖保佑       永无BUG
 
-
-import lombok.Getter;
-import lombok.Setter;
+import com.baomidou.mybatisplus.plugins.PaginationInterceptor;
+import org.springframework.context.annotation.Bean;
 
 /**
  * @Creator: zhang.jiaming
- * @CreationTime: 2019-09-23 14:19
- * @Description: 测试用
+ * @CreationTime: 2019-09-27 16:59
+ * @Description: 方言
  **/
 
-@Getter
-@Setter
-public class User {
-    private String name;
+public class MybatisPlusConfig {
+    @Bean
+    public PaginationInterceptor paginationInterceptor(){
+        PaginationInterceptor page = new PaginationInterceptor();
+        //设置方言类型
+        page.setDialectType("mysql");
+        return page;
+    }
 }
