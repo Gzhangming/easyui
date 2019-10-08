@@ -6,6 +6,7 @@ import com.tongc.easyui.dto.arg.UserCeshiInsert;
 import com.tongc.easyui.dto.arg.UserCeshiSearch;
 import com.tongc.easyui.dto.arg.UserCeshiUpdate;
 import com.tongc.easyui.service.UserCeshiService;
+import com.tongc.easyui.util.MyUtil;
 import hans.common.exception.ParameterMissException;
 import hans.common.persistence.ResponseVo;
 import hans.common.persistence.dto.BaseDto;
@@ -148,5 +149,7 @@ public class UserCeshiController extends BaseController {
         checkBinding(bindingResult);
         return userCeshiService.delete(idsDto.getIds());
     }
+
+
 
 }
