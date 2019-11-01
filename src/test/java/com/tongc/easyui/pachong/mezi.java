@@ -42,7 +42,9 @@ import java.net.URLEncoder;
 public class mezi {
 
     public static void main(String[] args) {
-        Connection connect = Jsoup.connect("http://pic.netbian.com/tupian/20694.html");
+        //http://pic.netbian.com/tupian/20694.html
+        //https://sh.58.com/ershoufang/39887300187657x.shtml?utm_source=market&spm=u-2d2yxv86y3v43nkddh1.BDPCPZ_BT&cityListName=sh&curListName=sh&lg=https%3A%2F%2Flegoclick.58.com%2Fjump%3Ftarget%3Dszq1pa3draOWUvYfugF1pAqduh78uzt1rH93P1nknjD3P1mdPL980v6YUykKuaYvuyRWmhR-niYknAwbsHwhuAEVrHEOPzYznj7hPHRWnAc1nyNKPWm3rHEdPjnkPHbYP1bKTHDQrjndn1cLn1b3nW9Ln10KP1DknTDLnHTkTHD_nHnKnHTQTHDdP1cvnjT3P1bvnH0Kn1mKwbPxwRPAgYQFNdwxNDnKnEDQTEDVnEDKnHDOnjD3P1TdnHTQrjbkP1mYrTDvTEDQTH7-PjDkuhubsHFWnWcVPANLnad6Pyc1synYPWK6nhcOmhn3uEDQnHbknH9LnjNQnHnznHN1rjNvTHDQrHTQrj0kPHDkrjmknjEznWEKTEDKTEDVTyd60hV-IT7dsHFbnM-3IW9vXHPvPjP8pvwbpjD8EbwEEdKpgYFNTy6YIZK1rBtf0v98PH98mvqVsvRz0v6fIyu6Uh0f5LRYURq1ULRzmvNqUy7zpvRYFMPkUHddsHFbnM-3IW9vXHPvPjP8pvwbpjD8EbwEEdKpgYFNTybdHbqNRWcLsYPfw7CzIAqLmyPNiv0q5EDQn1b8nWcvsWDLnz3QnjcKnTDkTEDQsjD1TgVqTHDknjnzTHDknjD3n19KnjEvrADzP1DVmWcQmBYYnj0Osy7bmvcVujI-rHbYujKBPAm3TEDkTEDKnTDQnjD_nHTQnzkQnH01PW0KP1TkmWmdnAuBnAEdPHF6uT&referinfo=FALSE&typecode=200&from=1-list-0&PGTID=0d30000c-0000-2c43-19bb-bc01e5906e38&ClickID=1
+        Connection connect = Jsoup.connect("http://www.shweihua.net/Product");
         try {
             Document document = connect.get();
             Elements img = document.getElementsByTag("img");
@@ -55,7 +57,7 @@ public class mezi {
                 //打印URL
                 System.out.println("URL地址:"+attr);
                 //下载图片到本地
-                downImages("c:/img/dw",attr);
+                downImages("c:/img/wb",attr);
             }
         }catch (IOException e){
             e.printStackTrace();
